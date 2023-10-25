@@ -1,0 +1,5 @@
+f = open('texto.txt', 'r+')
+f.write('0123456789abcdef')
+f.seek(5)
+x = f.read(1)
+print(x)
