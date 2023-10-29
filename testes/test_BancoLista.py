@@ -1,5 +1,7 @@
 from banco_lista import BancoLista
+from conta_abstrata import ContaAbstrata
 
 class CriarBanco():
     if __name__ == '__main__':
-        rian = BancoLista.cadastrar(22.897-4)
+        conta = ContaAbstrata(11.234-0)
+        rian = BancoLista.cadastrar(conta)

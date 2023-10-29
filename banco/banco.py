@@ -1,4 +1,4 @@
-from p.conta.conta import Conta
+from conta import Conta
 
 class Banco:
     def __init__(self):

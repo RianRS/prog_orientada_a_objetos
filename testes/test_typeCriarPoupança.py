@@ -1,5 +1,5 @@
-from p.conta.conta_poupanca import ContaPoupanca
-from p.conta.conta import Conta
+from conta_poupanca import ContaPoupanca
+from conta import Conta
 
 
 

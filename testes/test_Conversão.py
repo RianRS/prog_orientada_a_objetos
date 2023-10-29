@@ -1,5 +1,5 @@
-from p.conta.conta import Conta
-from p.conta.conta_especial import ContaEspecial
+from conta import Conta
+from conta_especial import ContaEspecial
 
 
 # Criando uma conta do tipo Conta e creditando 20 reais

@@ -1,9 +1,9 @@
-from p.conta.conta import Conta
-from p.conta.conta_poupanca import ContaPoupanca
-from p.conta.conta_especial import ContaEspecial
-from p.conta.conta_abstrata import ContaAbstrata
-from p.exception import CIExpection
-from p.expection.new_expection import SIExpection
+from conta import Conta
+from conta_poupanca import ContaPoupanca
+from conta_especial import ContaEspecial
+from conta_abstrata import ContaAbstrata
+from conta_inexistente import CIException
+from saldo_insuficiente import SIExpection
 
 
 class BancoLista:
@@ -14,19 +14,20 @@ class BancoLista:
         self.contas.append(ContaAbstrata)
 
     def procurar_conta(self, numero):
-
         for conta in self.contas:
             if conta.get_numero() == numero:
                 return conta
             else:
+                print('Conta inexistente!')
                 return None
+
 
     def debitar(self, numero, valor):
         try:
             conta = self.procurar_conta(numero)
             conta.debitar(valor)
-        except CIExpection(numero) as erroci:
-            print(erroci)
+        except CIException(numero) as errorci:
+            print(errorci)
 
         except SIExpection(conta.get_saldo(), conta.get_numero()) as errorsi:
             print(errorsi)
